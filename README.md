@@ -1,1 +1,2 @@
-# Post-Effect-Editor
+# Post-Effect Editor
+Editor which allows editing of all file formats found in the posteffect folder in Mario Kart Wii. Some formats are not handled correctly, and some values are wrong. The code is also written horribly.

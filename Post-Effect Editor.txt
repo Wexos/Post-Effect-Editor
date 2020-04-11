@@ -1,0 +1,18 @@
+To Do:
+==Solution==
+Add to seperate projects
+
+==BLMAP==
+CellEndEdit for float
+
+==BLIGHT==
+CellEndEdit for float
+
+==BFG==
+* Finished?
+
+==BDOF==
+* Finished?
+
+==BBLM==
+* Finished?

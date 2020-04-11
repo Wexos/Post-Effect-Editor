@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2DFB3C5-59B5-4119-9637-0E1E32AF2CB3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Effect_Editor</RootNamespace>
+    <AssemblyName>Post-Effect Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\BBLMComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\BBLMComponent.Designer.cs">
+      <DependentUpon>BBLMComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\BDOFComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\BDOFComponent.Designer.cs">
+      <DependentUpon>BDOFComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\BFGComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\BFGComponent.Designer.cs">
+      <DependentUpon>BFGComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\LMAPComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\LMAPComponent.Designer.cs">
+      <DependentUpon>LMAPComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\LTEXComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\LTEXComponent.Designer.cs">
+      <DependentUpon>LTEXComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\WrongMagicException.cs" />
+    <Compile Include="Exceptions\WrongSizeException.cs" />
+    <Compile Include="File Formats\BBLM.cs" />
+    <Compile Include="File Formats\BDOF.cs" />
+    <Compile Include="File Formats\BFG.cs" />
+    <Compile Include="File Formats\BLIGHT.cs" />
+    <Compile Include="File Formats\BLMAP.cs" />
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BLMAPEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BLMAPEditor.Designer.cs">
+      <DependentUpon>BLMAPEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BBLMEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BBLMEditor.Designer.cs">
+      <DependentUpon>BBLMEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BDOFEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BDOFEditor.Designer.cs">
+      <DependentUpon>BDOFEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BFGEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BFGEditor.Designer.cs">
+      <DependentUpon>BFGEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BLIGHTEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BLIGHTEditor.Designer.cs">
+      <DependentUpon>BLIGHTEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crap\Program.cs" />
+    <Compile Include="Math\HexUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Components\BBLMComponent.resx">
+      <DependentUpon>BBLMComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\BDOFComponent.resx">
+      <DependentUpon>BDOFComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\BFGComponent.resx">
+      <DependentUpon>BFGComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\LMAPComponent.resx">
+      <DependentUpon>LMAPComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\LTEXComponent.resx">
+      <DependentUpon>LTEXComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BBLMEditor.resx">
+      <DependentUpon>BBLMEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BLMAPEditor.resx">
+      <DependentUpon>BLMAPEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BDOFEditor.resx">
+      <DependentUpon>BDOFEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BFGEditor.resx">
+      <DependentUpon>BFGEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BLIGHTEditor.resx">
+      <DependentUpon>BLIGHTEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Crap\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BigEndianLibrary\BigEndianLibrary.csproj">
+      <Project>{a692c0f6-47e5-4bdf-aa0f-0b3475af7fb0}</Project>
+      <Name>BigEndianLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Changelog.txt" />
+    <Content Include="icon.ico" />
+    <None Include="Resources\PFXED.png" />
+    <None Include="Resources\PostEffect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
